@@ -7,11 +7,11 @@
 This project provide sample serach feature for all products availble in inventory based on their price category and supplier name etc.
 
 ## Getting Started
-* [Prerequisite] (#markdown-header-prerequisite)
-* [Configuration] (#markdown-header-configuration)
-* [Build] (#markdown-header-build)
-* [Deploy] (#markdown-header-deploy)
-* [Run] (#markdown-header-run)
+* [Prerequisite] 
+* [Configuration] 
+* [Test]
+* [Build] 
+* [Run] 
 
 ## Prerequisite
 * Git
@@ -22,36 +22,42 @@ This project provide sample serach feature for all products availble in inventor
 ## Configuration
 
 ---------------------------------------------------------------------------------------------------------------------------------
-   Key
+   Key                                                  Value
 ---------------------------------------------------------------------------------------------------------------------------------
 spring.datasource.url                                    jdbc:h2:mem:sapient
 spring.datasource.driverClassName                        org.h2.Driver        
-spring.datasource.username=ecom
-spring.datasource.password=das8Qfsfd9ak!UK8
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.datasource.username=                              ecom
+spring.datasource.password                               das8Qfsfd9ak!UK8
+spring.jpa.database-platform                             org.hibernate.dialect.H2Dialect
+#spring.datasource.url                                   jdbc:h2:mem:sapient
+#spring.datasource.url                                   jdbc:h2:file:/data/sample
+#spring.datasource.url                                   jdbc:h2:file:C:/data/sample
+spring.h2.console.enabled                                true
+spring.h2.console.path                                   /h2
+spring.h2.console.settings.trace                         true
+spring.h2.console.settings.web-allow-others              true
+spring.jpa.show-sql                                      false
+spring.jpa.properties.hibernate.format_sql               false
+-----------------------------------------------------------------------------------------------------------------------------------
 
+##
 
-# temporary data storage
-#spring.datasource.url = jdbc:h2:mem:sapient
- 
-# temporary data storage
-#spring.datasource.url = jdbc:h2:file:/data/sample
-#spring.datasource.url = jdbc:h2:file:C:/data/sample
+```
+mvn test
+```
 
+## Build
 
-# Enabling H2 Console
-spring.h2.console.enabled=true
- 
-# Custom H2 Console URL
-spring.h2.console.path=/h2
+```
+mvn clean pacakge
+```
 
+## Run
 
-# Whether to enable trace output.
-spring.h2.console.settings.trace=true
- 
-# Whether to enable remote access.
-spring.h2.console.settings.web-allow-others=true
+```
+java -jar ecommerceSearch.jar
+```
 
+##Author
 
-spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.format_sql=false
+`Ankit Patwa`
