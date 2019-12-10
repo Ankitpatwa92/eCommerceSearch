@@ -71,6 +71,10 @@ http://localhost:8080/supplier
 # Get supploer by supplier name
 http://localhost:8080/supplier?search=name:MK
 
+#Get spark shoes from supplier 1
+http://localhost:8080/product?search=brand:spark,supplier.id:1
+
+
 ```
 
 
