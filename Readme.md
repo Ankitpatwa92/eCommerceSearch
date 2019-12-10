@@ -40,7 +40,7 @@ This project provide sample serach feature for all products availble in inventor
 | spring.jpa.properties.hibernate.format_sql   |            false                                        |
 
 
-##
+## Test
 
 ```
 mvn test
@@ -57,6 +57,22 @@ mvn clean pacakge
 ```
 java -jar ecommerceSearch.jar
 ```
+
+## Rest End Point Example
+
+```
+## This will give all the shoes whose brand is spark and canvas and price is greater than 2000 
+
+http://localhost:8080/product?search=brand:spark;canvas,price>2000,category:shoes
+
+# Get supploer list
+http://localhost:8080/supplier
+
+# Get supploer by supplier name
+http://localhost:8080/supplier?search=name:MK
+
+```
+
 
 ## Author
 
