@@ -61,6 +61,24 @@ java -jar ecommerceSearch.jar
 ## Rest End Point Example
 
 ```
+## Add Supplier
+http://localhost:8080/supplier/add      (Post Req)
+
+#Body
+[{"name":"SK","address":"pune"},{"name":"JJ Supplier","address":"Bhopal"}]
+
+
+## Add Product
+http://localhost:8080/product/add      (Post Req)
+
+#Body
+[
+	{"name":"shoes","category":"c1","sku":"S01","color":"red","size":12,"brand":"puma","price":2000,"supplier":{"Id":1},"productcount":10},
+	{"name":"shoes","category":"c2","sku":"S02","color":"blue","size":12,"brand":"puma","price":2500,"supplier":{"Id":2},"productcount":20},	
+]
+
+
+
 ## This will give all the shoes whose brand is spark and canvas and price is greater than 2000 
 
 http://localhost:8080/product?search=brand:spark;canvas,price>2000,category:shoes
