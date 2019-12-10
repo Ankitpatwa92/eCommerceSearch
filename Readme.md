@@ -58,6 +58,6 @@ mvn clean pacakge
 java -jar ecommerceSearch.jar
 ```
 
-##Author
+## Author
 
 `Ankit Patwa`
